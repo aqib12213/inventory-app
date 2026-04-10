@@ -4,6 +4,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { CircleCheckBig, ListTodo, Trash2 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Header } from "@/components/layout/header";
+import { SyncStatusIcon } from "@/components/SyncStatusIcon";
 import { Badge } from "@/components/ui/badge";
 import {
 	Breadcrumb,
@@ -89,6 +90,7 @@ function TodoRoute() {
 						</BreadcrumbItem>
 					</BreadcrumbList>
 				</Breadcrumb>
+				<SyncStatusIcon />
 			</Header>
 
 			<main className="flex flex-1 flex-col gap-6 p-4 md:p-6">

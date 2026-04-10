@@ -50,14 +50,14 @@ export function SignIn2() {
 				)}
 			>
 				<img
-					alt="DONATIONS-CLIENT"
+					alt="INVENTORY_APP"
 					className="dark:hidden"
 					height={1151}
 					src={dashboardLight}
 					width={1024}
 				/>
 				<img
-					alt="DONATIONS-CLIENT"
+					alt="INVENTORY_APP"
 					className="hidden dark:block"
 					height={1138}
 					src={dashboardDark}

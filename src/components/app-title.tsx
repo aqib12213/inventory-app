@@ -15,7 +15,7 @@ export function AppTitle() {
 				</div>
 				<div className="relative grid flex-1 text-start text-sm leading-tight">
 					<span className="overflow-visible truncate font-semibold text-lg">
-						DONATIONS-CLIENT
+						INVENTORY_APP
 					</span>
 					<Badge
 						className="absolute -top-1 left-18 rounded-none"

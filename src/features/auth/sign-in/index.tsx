@@ -19,8 +19,8 @@ export function SignIn() {
 				<CardHeader>
 					<CardTitle className="text-lg tracking-tight">Sign in</CardTitle>
 					<CardDescription>
-						Enter your email and password below to <br />
-						log into your account
+						Enter your email to receive a sign-in code from <br />
+						Dexie Cloud and access your account
 					</CardDescription>
 				</CardHeader>
 				<CardContent>

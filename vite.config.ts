@@ -43,10 +43,9 @@ const config = defineConfig({
 			},
 
 			manifest: {
-				name: "DONATIONS-CLIENT",
+				name: "INVENTORY_APP",
 				short_name: "D-CLIENT",
-				description:
-					"DONATIONS-CLIENT is an offline-first Donation Managment app",
+				description: "INVENTORY_APP is an offline-first Donation Managment app",
 				theme_color: "#fafafa",
 			},
 

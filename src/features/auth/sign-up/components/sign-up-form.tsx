@@ -1,7 +1,7 @@
 import { useForm } from "@tanstack/react-form";
+import { toast } from "sonner";
 import { z } from "zod";
 import { IconFacebook, IconGithub } from "@/assets/brand-icons";
-import { PasswordInput } from "@/components/password-input";
 import { Button } from "@/components/ui/button";
 import {
 	Field,
@@ -11,9 +11,8 @@ import {
 	FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { todoDb } from "@/db/todo-db";
 import { cn } from "@/lib/utils";
-
-const MIN_PASSWORD_LENGTH = 7;
 
 const formSchema = z
 	.object({
@@ -22,35 +21,38 @@ const formSchema = z
 			error: (iss) =>
 				iss.input === "" ? "Please enter your email" : undefined,
 		}),
-		password: z
-			.string()
-			.min(1, "Please enter your password")
-			.min(
-				MIN_PASSWORD_LENGTH,
-				`Password must be at least ${MIN_PASSWORD_LENGTH} characters long`
-			),
-		confirmPassword: z.string().min(1, "Please confirm your password"),
 	})
-	.refine((data) => data.password === data.confirmPassword, {
-		message: "Passwords don't match.",
-		path: ["confirmPassword"],
+	.refine((data) => data.name.trim().length > 0, {
+		message: "Please enter your name",
+		path: ["name"],
 	});
 
-export function SignUpForm({
-	className,
-	...props
-}: React.HTMLAttributes<HTMLFormElement>) {
+interface SignUpFormProps extends React.HTMLAttributes<HTMLFormElement> {
+	redirectTo?: string;
+}
+
+export function SignUpForm({ className, redirectTo, ...props }: SignUpFormProps) {
 	const form = useForm({
 		defaultValues: {
 			name: "",
 			email: "",
-			password: "",
-			confirmPassword: "",
 		},
-		onSubmit: async () => {
-			await Promise.resolve();
-			const { toast } = await import("sonner");
-			toast.error("Authentication is disabled.");
+		onSubmit: async ({ value }) => {
+			try {
+				await todoDb.cloud.login({
+					email: value.email,
+					grant_type: "otp",
+					intent: "register",
+					redirectPath: redirectTo,
+				});
+				toast.success("Check your email to complete account setup.");
+			} catch (error) {
+				toast.error(
+					error instanceof Error
+						? error.message
+						: "Unable to start account creation."
+				);
+			}
 		},
 	});
 
@@ -62,21 +64,6 @@ export function SignUpForm({
 	const validateEmail = (value: string): string | undefined => {
 		const result = formSchema.shape.email.safeParse(value);
 		return result.success ? undefined : result.error.issues[0]?.message;
-	};
-
-	const validatePassword = (value: string): string | undefined => {
-		const result = formSchema.shape.password.safeParse(value);
-		return result.success ? undefined : result.error.issues[0]?.message;
-	};
-
-	const validateConfirmPassword = (value: string): string | undefined => {
-		const result = formSchema.shape.confirmPassword.safeParse(value);
-		if (!result.success) {
-			return result.error.issues[0]?.message;
-		}
-		return value === form.state.values.password
-			? undefined
-			: "Passwords don't match.";
 	};
 
 	return (
@@ -146,70 +133,6 @@ export function SignUpForm({
 									onChange={(event) => field.handleChange(event.target.value)}
 									placeholder="name@example.com"
 									type="email"
-									value={field.state.value}
-								/>
-								<FieldError>{errorMessage}</FieldError>
-							</Field>
-						);
-					}}
-				</form.Field>
-
-				<form.Field
-					name="password"
-					validators={{
-						onBlur: ({ value }) => validatePassword(value),
-						onSubmit: ({ value }) => validatePassword(value),
-					}}
-				>
-					{(field) => {
-						const fieldError = field.state.meta.errors[0];
-						const errorMessage =
-							typeof fieldError === "string" ? fieldError : undefined;
-
-						return (
-							<Field data-invalid={Boolean(errorMessage)}>
-								<FieldLabel htmlFor={field.name}>Password</FieldLabel>
-								<PasswordInput
-									aria-invalid={Boolean(errorMessage)}
-									autoComplete="new-password"
-									id={field.name}
-									name={field.name}
-									onBlur={field.handleBlur}
-									onChange={(event) => field.handleChange(event.target.value)}
-									placeholder="********"
-									type="password"
-									value={field.state.value}
-								/>
-								<FieldError>{errorMessage}</FieldError>
-							</Field>
-						);
-					}}
-				</form.Field>
-
-				<form.Field
-					name="confirmPassword"
-					validators={{
-						onBlur: ({ value }) => validateConfirmPassword(value),
-						onSubmit: ({ value }) => validateConfirmPassword(value),
-					}}
-				>
-					{(field) => {
-						const fieldError = field.state.meta.errors[0];
-						const errorMessage =
-							typeof fieldError === "string" ? fieldError : undefined;
-
-						return (
-							<Field data-invalid={Boolean(errorMessage)}>
-								<FieldLabel htmlFor={field.name}>Confirm Password</FieldLabel>
-								<PasswordInput
-									aria-invalid={Boolean(errorMessage)}
-									autoComplete="new-password"
-									id={field.name}
-									name={field.name}
-									onBlur={field.handleBlur}
-									onChange={(event) => field.handleChange(event.target.value)}
-									placeholder="********"
-									type="password"
 									value={field.state.value}
 								/>
 								<FieldError>{errorMessage}</FieldError>
