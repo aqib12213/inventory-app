@@ -13,121 +13,158 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/_authenticated/todo.tsx:115
+#. placeholder {0}: searchText.trim()
+#: src/features/inventory/components/bulk-add-dialog.tsx:259
+msgid "\"{0}\""
+msgstr "\"{0}\""
+
+#: src/routes/_authenticated/todo.tsx:117
 msgid "{activeCount} active"
 msgstr "{activeCount} active"
 
-#: src/routes/_authenticated/todo.tsx:118
+#: src/routes/_authenticated/todo.tsx:120
 msgid "{completedCount} completed"
 msgstr "{completedCount} completed"
 
-#: src/components/data/sidebar-data.ts:156
-msgid "Account"
-msgstr "Account"
+#: src/features/inventory/components/inventory-summary.tsx:31
+msgid "{itemsCount} items"
+msgstr "{itemsCount} items"
 
-#: src/routes/_authenticated/index.tsx:229
+#: src/features/inventory/components/inventory-summary.tsx:33
+msgid "{totalQuantity} total quantity"
+msgstr "{totalQuantity} total quantity"
+
+#: src/components/data/sidebar-data.ts:156
+#~ msgid "Account"
+#~ msgstr "Account"
+
+#: src/routes/_authenticated/dashboard.tsx:229
 msgid "Actions"
 msgstr "Actions"
 
-#: src/routes/_authenticated/todo.tsx:151
+#: src/routes/_authenticated/todo.tsx:153
 msgid "Active"
 msgstr "Active"
 
-#: src/routes/_authenticated/todo.tsx:111
+#: src/features/inventory/components/bulk-add-dialog.tsx:182
+#: src/features/inventory/components/bulk-add-dialog.tsx:386
+msgid "Add"
+msgstr "Add"
+
+#: src/routes/_authenticated/todo.tsx:113
 msgid "Add a task"
 msgstr "Add a task"
 
-#: src/routes/_authenticated/todo.tsx:137
+#: src/features/inventory/components/bulk-add-dialog.tsx:189
+msgid "Add items"
+msgstr "Add items"
+
+#: src/features/inventory/inventory-page.tsx:190
+msgid "Add items and manage your inventory."
+msgstr "Add items and manage your inventory."
+
+#: src/routes/_authenticated/todo.tsx:139
 msgid "Add task"
 msgstr "Add task"
 
-#: src/routes/_authenticated/todo.tsx:181
+#: src/features/inventory/inventory-page.tsx:219
+msgid "Add your first item to start tracking inventory."
+msgstr "Add your first item to start tracking inventory."
+
+#: src/routes/_authenticated/todo.tsx:183
 msgid "Add your first task to start tracking your work."
 msgstr "Add your first task to start tracking your work."
 
-#: src/routes/_authenticated/todo.tsx:148
+#: src/routes/_authenticated/todo.tsx:150
 msgid "All"
 msgstr "All"
 
 #: src/components/data/sidebar-data.ts:161
-msgid "Appearance"
-msgstr "Appearance"
+#~ msgid "Appearance"
+#~ msgstr "Appearance"
 
 #: src/components/data/sidebar-data.ts:85
-msgid "Auth"
-msgstr "Auth"
+#~ msgid "Auth"
+#~ msgstr "Auth"
 
-#: src/routes/_authenticated/index.tsx:80
+#: src/routes/_authenticated/dashboard.tsx:80
 msgid "Churn Rate"
 msgstr "Churn Rate"
 
-#: src/routes/_authenticated/todo.tsx:167
+#: src/routes/_authenticated/todo.tsx:169
 msgid "Clear completed"
 msgstr "Clear completed"
 
-#: src/routes/_authenticated/todo.tsx:154
+#: src/routes/_authenticated/todo.tsx:156
 msgid "Completed"
 msgstr "Completed"
 
-#: src/routes/_authenticated/index.tsx:98
+#: src/routes/_authenticated/dashboard.tsx:98
 msgid "Contractor Name"
 msgstr "Contractor Name"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:259
+msgid "Create item"
+msgstr "Create item"
 
 #: src/components/data/sidebar-data.ts:77
 #~ msgid "Currencies"
 #~ msgstr "Currencies"
 
 #: src/components/data/sidebar-data.ts:70
-msgid "Customers"
-msgstr "Customers"
+#~ msgid "Customers"
+#~ msgstr "Customers"
 
-#: src/components/data/sidebar-data.ts:55
-#: src/routes/_authenticated/index.tsx:110
+#: src/routes/_authenticated/dashboard.tsx:110
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: src/routes/_authenticated/todo.tsx:216
+#: src/features/inventory/components/inventory-summary.tsx:27
+msgid "Database error: {error}"
+msgstr "Database error: {error}"
+
+#: src/routes/_authenticated/todo.tsx:218
 msgid "Delete task"
 msgstr "Delete task"
 
-#: src/routes/_authenticated/todo.tsx:98
+#: src/routes/_authenticated/todo.tsx:100
 msgid "Dexie Todo App"
 msgstr "Dexie Todo App"
 
 #: src/components/data/sidebar-data.ts:171
-msgid "Display"
-msgstr "Display"
+#~ msgid "Display"
+#~ msgstr "Display"
 
-#: src/routes/_authenticated/index.tsx:100
-#: src/routes/_authenticated/index.tsx:225
+#: src/routes/_authenticated/dashboard.tsx:100
+#: src/routes/_authenticated/dashboard.tsx:225
 msgid "Edit"
 msgstr "Edit"
 
-#: src/routes/_authenticated/index.tsx:278
+#: src/routes/_authenticated/dashboard.tsx:278
 msgid "Efficiency Alert"
 msgstr "Efficiency Alert"
 
-#: src/components/data/sidebar-data.ts:42
+#: src/components/data/sidebar-data.ts:40
 msgid "Enterprise"
 msgstr "Enterprise"
 
 #: src/components/data/sidebar-data.ts:111
-msgid "Errors"
-msgstr "Errors"
+#~ msgid "Errors"
+#~ msgstr "Errors"
 
-#: src/routes/_authenticated/index.tsx:145
+#: src/routes/_authenticated/dashboard.tsx:145
 msgid "Financial overview for the current fiscal period."
 msgstr "Financial overview for the current fiscal period."
 
 #: src/components/data/sidebar-data.ts:120
-msgid "Forbidden"
-msgstr "Forbidden"
+#~ msgid "Forbidden"
+#~ msgstr "Forbidden"
 
 #: src/components/data/sidebar-data.ts:101
-msgid "Forgot Password"
-msgstr "Forgot Password"
+#~ msgid "Forgot Password"
+#~ msgstr "Forgot Password"
 
-#: src/components/data/sidebar-data.ts:52
+#: src/components/data/sidebar-data.ts:50
 msgid "General"
 msgstr "General"
 
@@ -140,172 +177,273 @@ msgstr "Help Center"
 #~ msgid "Home"
 #~ msgstr "Home"
 
-#: src/routes/_authenticated/index.tsx:269
+#: src/features/inventory/components/bulk-add-dialog.tsx:227
+#: src/features/inventory/components/bulk-remove-dialog.tsx:177
+#: src/features/inventory/components/bulk-remove-dialog.tsx:224
+msgid "In stock"
+msgstr "In stock"
+
+#: src/routes/_authenticated/dashboard.tsx:269
 msgid "Insights"
 msgstr "Insights"
 
 #: src/components/data/sidebar-data.ts:130
-msgid "Internal Server Error"
-msgstr "Internal Server Error"
+#~ msgid "Internal Server Error"
+#~ msgstr "Internal Server Error"
 
-#: src/components/data/sidebar-data.ts:65
+#: src/components/data/sidebar-data.ts:63
+#: src/features/inventory/components/inventory-summary.tsx:20
+#: src/features/inventory/inventory-page.tsx:166
+msgid "Inventory"
+msgstr "Inventory"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:224
+#: src/features/inventory/components/bulk-add-dialog.tsx:277
+#: src/features/inventory/components/bulk-remove-dialog.tsx:174
+#: src/features/inventory/components/bulk-remove-dialog.tsx:218
+#: src/features/inventory/components/inventory-items-table.tsx:27
+msgid "Item"
+msgstr "Item"
+
+#: src/features/inventory/inventory-page.tsx:187
 msgid "Items"
 msgstr "Items"
 
-#: src/routes/_authenticated/index.tsx:81
+#: src/features/inventory/components/inventory-summary.tsx:23
+msgid "Keep track of items and quantities."
+msgstr "Keep track of items and quantities."
+
+#: src/routes/_authenticated/dashboard.tsx:81
 msgid "Last 30 days"
 msgstr "Last 30 days"
 
-#: src/routes/_authenticated/index.tsx:50
+#: src/routes/_authenticated/dashboard.tsx:50
 msgid "Last 60 days"
 msgstr "Last 60 days"
 
 #: src/components/data/sidebar-data.ts:135
-msgid "Maintenance Error"
-msgstr "Maintenance Error"
+#~ msgid "Maintenance Error"
+#~ msgstr "Maintenance Error"
 
-#: src/routes/_authenticated/index.tsx:219
+#: src/routes/_authenticated/dashboard.tsx:219
 msgid "Name"
 msgstr "Name"
 
-#: src/routes/_authenticated/index.tsx:65
+#: src/routes/_authenticated/dashboard.tsx:65
 msgid "New Customers"
 msgstr "New Customers"
 
-#: src/routes/_authenticated/todo.tsx:178
+#: src/features/inventory/components/bulk-add-dialog.tsx:270
+#: src/features/inventory/components/bulk-remove-dialog.tsx:211
+msgid "No items selected."
+msgstr "No items selected."
+
+#: src/features/inventory/inventory-page.tsx:216
+msgid "No items yet"
+msgstr "No items yet"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:215
+#: src/features/inventory/components/bulk-remove-dialog.tsx:165
+msgid "No matching items."
+msgstr "No matching items."
+
+#: src/routes/_authenticated/todo.tsx:180
 msgid "No tasks yet"
 msgstr "No tasks yet"
 
 #: src/components/data/sidebar-data.ts:125
-msgid "Not Found"
-msgstr "Not Found"
+#~ msgid "Not Found"
+#~ msgstr "Not Found"
 
-#: src/components/data/sidebar-data.ts:166
-#: src/routes/_authenticated/index.tsx:129
+#: src/routes/_authenticated/dashboard.tsx:129
 msgid "Notifications"
 msgstr "Notifications"
 
 #: src/components/data/sidebar-data.ts:144
-msgid "Other"
-msgstr "Other"
+#~ msgid "Other"
+#~ msgstr "Other"
 
 #: src/components/data/sidebar-data.ts:105
-msgid "OTP"
-msgstr "OTP"
+#~ msgid "OTP"
+#~ msgstr "OTP"
 
 #: src/components/data/sidebar-data.ts:82
-msgid "Pages"
-msgstr "Pages"
+#~ msgid "Pages"
+#~ msgstr "Pages"
 
 #: src/components/data/sidebar-data.ts:151
-msgid "Profile"
-msgstr "Profile"
+#~ msgid "Profile"
+#~ msgstr "Profile"
 
-#: src/routes/_authenticated/index.tsx:292
+#: src/routes/_authenticated/dashboard.tsx:292
 msgid "Projected Growth"
 msgstr "Projected Growth"
 
-#: src/routes/_authenticated/index.tsx:202
+#: src/features/inventory/components/bulk-add-dialog.tsx:280
+#: src/features/inventory/components/inventory-items-table.tsx:30
+msgid "Quantity"
+msgstr "Quantity"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:293
+#: src/features/inventory/components/bulk-add-dialog.tsx:336
+msgid "Quantity to add"
+msgstr "Quantity to add"
+
+#: src/features/inventory/components/bulk-remove-dialog.tsx:237
+msgid "Quantity to remove"
+msgstr "Quantity to remove"
+
+#: src/routes/_authenticated/dashboard.tsx:202
 msgid "Recent Transactions"
 msgstr "Recent Transactions"
 
-#: src/routes/_authenticated/index.tsx:120
+#: src/features/inventory/components/bulk-add-dialog.tsx:323
+#: src/features/inventory/components/bulk-add-dialog.tsx:366
+#: src/features/inventory/components/bulk-remove-dialog.tsx:132
+#: src/features/inventory/components/bulk-remove-dialog.tsx:221
+#: src/features/inventory/components/bulk-remove-dialog.tsx:271
+#: src/features/inventory/components/bulk-remove-dialog.tsx:289
+msgid "Remove"
+msgstr "Remove"
+
+#: src/features/inventory/components/bulk-remove-dialog.tsx:139
+msgid "Remove items"
+msgstr "Remove items"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:206
+#: src/features/inventory/components/bulk-remove-dialog.tsx:156
+msgid "Results"
+msgstr "Results"
+
+#: src/routes/_authenticated/dashboard.tsx:120
 msgid "Search"
 msgstr "Search"
 
-#: src/routes/_authenticated/index.tsx:122
+#: src/features/inventory/components/bulk-add-dialog.tsx:200
+#: src/features/inventory/components/bulk-remove-dialog.tsx:150
+msgid "Search by name"
+msgstr "Search by name"
+
+#: src/routes/_authenticated/dashboard.tsx:122
 msgid "Search for something..."
 msgstr "Search for something..."
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:198
+#: src/features/inventory/components/bulk-remove-dialog.tsx:148
+msgid "Search items"
+msgstr "Search items"
+
+#: src/features/inventory/components/bulk-remove-dialog.tsx:142
+msgid "Search items by name and choose how many to remove."
+msgstr "Search items by name and choose how many to remove."
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:192
+msgid "Search items by name and choose quantities to add."
+msgstr "Search items by name and choose quantities to add."
 
 #: src/components/data/sidebar-data.ts:185
 #~ msgid "Seed Data"
 #~ msgstr "Seed Data"
 
+#: src/features/inventory/components/bulk-add-dialog.tsx:245
+#: src/features/inventory/components/bulk-remove-dialog.tsx:195
+msgid "Select"
+msgstr "Select"
+
+#: src/features/inventory/components/bulk-add-dialog.tsx:266
+#: src/features/inventory/components/bulk-remove-dialog.tsx:207
+msgid "Selected"
+msgstr "Selected"
+
 #: src/components/data/sidebar-data.ts:147
-msgid "Settings"
-msgstr "Settings"
+#~ msgid "Settings"
+#~ msgstr "Settings"
 
 #: src/components/data/sidebar-data.ts:89
-msgid "Sign In"
-msgstr "Sign In"
+#~ msgid "Sign In"
+#~ msgstr "Sign In"
 
 #: src/components/data/sidebar-data.ts:93
-msgid "Sign In (2 Col)"
-msgstr "Sign In (2 Col)"
+#~ msgid "Sign In (2 Col)"
+#~ msgstr "Sign In (2 Col)"
 
 #: src/components/data/sidebar-data.ts:97
-msgid "Sign Up"
-msgstr "Sign Up"
+#~ msgid "Sign Up"
+#~ msgstr "Sign Up"
 
-#: src/components/data/sidebar-data.ts:47
+#: src/features/inventory/components/bulk-add-dialog.tsx:210
+#: src/features/inventory/components/bulk-remove-dialog.tsx:160
+msgid "Start typing to search."
+msgstr "Start typing to search."
+
+#: src/components/data/sidebar-data.ts:45
 msgid "Startup"
 msgstr "Startup"
 
-#: src/routes/_authenticated/index.tsx:99
+#: src/routes/_authenticated/dashboard.tsx:99
 msgid "Subscription"
 msgstr "Subscription"
 
-#: src/routes/_authenticated/index.tsx:282
+#: src/routes/_authenticated/dashboard.tsx:282
 msgid "Subscription costs increased by 18% this month. Consider auditing unused SaaS licenses."
 msgstr "Subscription costs increased by 18% this month. Consider auditing unused SaaS licenses."
 
-#: src/routes/_authenticated/index.tsx:222
+#: src/routes/_authenticated/dashboard.tsx:222
 msgid "Table cell"
 msgstr "Table cell"
 
-#: src/routes/_authenticated/todo.tsx:131
+#: src/routes/_authenticated/todo.tsx:133
 msgid "Task title"
 msgstr "Task title"
 
-#: src/routes/_authenticated/index.tsx:66
+#: src/routes/_authenticated/dashboard.tsx:66
 msgid "This quarter"
 msgstr "This quarter"
 
-#: src/components/data/sidebar-data.ts:60
-#: src/routes/_authenticated/todo.tsx:87
+#: src/routes/_authenticated/todo.tsx:88
 msgid "Todo"
 msgstr "Todo"
 
-#: src/routes/_authenticated/todo.tsx:195
+#: src/routes/_authenticated/todo.tsx:197
 msgid "Toggle task"
 msgstr "Toggle task"
 
-#: src/routes/_authenticated/index.tsx:49
+#: src/routes/_authenticated/dashboard.tsx:49
 msgid "Total Sales & Cost"
 msgstr "Total Sales & Cost"
 
 #: src/components/data/sidebar-data.ts:115
-msgid "Unauthorized"
-msgstr "Unauthorized"
+#~ msgid "Unauthorized"
+#~ msgstr "Unauthorized"
 
 #: src/components/data/sidebar-data.ts:75
-msgid "Vendors"
-msgstr "Vendors"
+#~ msgid "Vendors"
+#~ msgstr "Vendors"
 
-#: src/routes/_authenticated/index.tsx:209
+#: src/routes/_authenticated/dashboard.tsx:209
 msgid "View all"
 msgstr "View all"
 
-#: src/routes/_authenticated/index.tsx:75
+#: src/routes/_authenticated/dashboard.tsx:75
 msgid "vs last quarter"
 msgstr "vs last quarter"
 
-#: src/routes/_authenticated/index.tsx:90
+#: src/routes/_authenticated/dashboard.tsx:90
 msgid "vs prev. 30 days"
 msgstr "vs prev. 30 days"
 
-#: src/routes/_authenticated/index.tsx:60
+#: src/routes/_authenticated/dashboard.tsx:60
 msgid "vs prev. 60 days"
 msgstr "vs prev. 60 days"
 
-#: src/routes/_authenticated/todo.tsx:133
+#: src/routes/_authenticated/todo.tsx:135
 msgid "What needs to be done?"
 msgstr "What needs to be done?"
 
-#: src/routes/_authenticated/index.tsx:304
+#: src/routes/_authenticated/dashboard.tsx:304
 msgid "You are on track to exceed Q4 targets by 6.2% if current spending holds."
 msgstr "You are on track to exceed Q4 targets by 6.2% if current spending holds."
 
-#: src/routes/_authenticated/todo.tsx:101
+#: src/routes/_authenticated/todo.tsx:103
 msgid "Your tasks are stored locally in IndexedDB with Dexie and update live on this page."
 msgstr "Your tasks are stored locally in IndexedDB with Dexie and update live on this page."
